@@ -1,8 +1,8 @@
 {
-  "name": "log4js",
-  "version": "6.4.3",
+  "name": "@brightsu/log5js",
+  "version": "1.0.1",
   "description": "Port of Log4js to work with node.",
-  "homepage": "https://log4js-node.github.io/log4js-node/",
+  "homepage": "https://github.com/iambright/log5js",
   "files": [
     "lib",
     "types",
@@ -18,21 +18,18 @@
   "license": "Apache-2.0",
   "main": "./lib/log4js",
   "types": "./types/log4js.d.ts",
-  "contributors": [
-    "Gareth Jones <gareth.nomiddlename@gmail.com>",
-    "Lam Wei Li <lam_wei_li@hotmail.com>"
-  ],
+  "bin": {
+    "log5js": "./lib/cli.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/log4js-node/log4js-node.git"
-  },
-  "bugs": {
-    "url": "http://github.com/log4js-node/log4js-node/issues"
+    "url": "https://github.com/iambright/log5js.git"
   },
   "engines": {
     "node": ">=8.0"
   },
   "scripts": {
+    "log5js": "node ./lib/cli.js",
     "pretest": "eslint \"lib/**/*.js\" \"test/**/*.js\"",
     "test": "tap \"test/tap/**/*.js\" --cov --timeout=45",
     "typings": "tsc -p types/tsconfig.json",
@@ -110,5 +107,6 @@
       "commit-msg": "validate-commit-msg",
       "pre-push": "npm test && npm run typings"
     }
-  }
+  },
+  "author": "bright.su@outlook.com"
 }
